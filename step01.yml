@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  remote_user: pi
+  roles:
+    - role: mikolak-net.raspi_config
+      raspi_config_timezone: America/New_York
+      raspi_config_enable_camera: yes
+      raspi_config_replace_user:
+        name: leonelgalan
+        path_to_ssh_key: ~/.ssh/id_rsa.pub

@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  remote_user: leonelgalan
+  roles:
+    - role: oefenweb.apt
+      apt_install:
+        - python3-pip
+        - sense-hat
+        - python-smbus
+        - i2c-tools
+        - python-setuptools
+    - role: pip3
+      pip_install:
+        - name: setuptools
+          extra_args: --upgrade
+        - name: RPI.GPIO
+        - name: adafruit-blinka
+        - name: adafruit-circuitpython-htu21d
+        - name: adafruit-circuitpython-seesaw
+        - name: evdev

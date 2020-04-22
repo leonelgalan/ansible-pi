@@ -1,0 +1,4 @@
+.DS_Store
+tmp
+wpa_supplicant.conf
+/*.log
