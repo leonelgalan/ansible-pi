@@ -77,7 +77,7 @@ Insert the SD card on the and turn on your Pi; Wait about 1 minute for it to boo
 Find your Raspberry Pi's IP address by searching for part of its MAC Address:
 
 ```sh
-$ sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}
+$ sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/(B8:27:EB|DC:A6:32)/{print ip}
 192.168.1.11
 ```
 
